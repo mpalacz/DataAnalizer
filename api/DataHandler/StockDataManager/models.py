@@ -95,7 +95,6 @@ class AuthUserUserPermissions(models.Model):
 class DataTable(models.Model):
     id = models.BigAutoField(primary_key=True)
     code = models.CharField(max_length=255, blank=True, null=True)
-    earliest_noting = models.DateTimeField(blank=True, null=True)
     name = models.CharField(max_length=255, blank=True, null=True)
 
     class Meta:
