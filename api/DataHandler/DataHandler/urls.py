@@ -15,9 +15,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from StockDataManager import views
+from api.DataHandler.StockDataManager import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    #path('companies/code')
+    path('companies/<string:code>', views.inject_data_to_db)
 ]
